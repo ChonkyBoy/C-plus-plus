@@ -160,15 +160,146 @@ int main(int argc, char **argv) {
         } */
 
     /* --- VECTORS --- */
-    cout << "--- EXERCICE 4.1 ---" << endl;
+
+    /*
+
+    cout << "--- EXERCICE 4.* ---" << endl;
+
+    // Exo 4.1
 
     vector<int> v1;
+    vector<int> v2(10, 0);
+    vector<int> v3(v2);
+    vector<int> v4(v3.begin(), v3.begin()+5 /* ou v2.end()-5 *//*);
+
+
+    // Exo 4.2
+
+    for (int i = 0; i < v4.size(); i++) {
+        cout << "Element n " << v4[1] << endl;
+    }
+
+    for (int const &value : v4) {
+        cout << "Element : " << value << endl;
+    }
+
+
+    // Exo 4.3
+
+    vector<int> v1;
+    vector<int> v2(10, 0);
+    vector<int> v3(v2);
+    vector<int> v4(v3.begin(), v3.begin()+5);
+
+    v4.push_back(12);
+    v4.insert(v4.begin(), 6);
+    v4.insert(v4.begin()+2 , 3, 6);
+    v4.insert(v4.begin()+3 , v3.begin() +2, v3.begin()+5);
+
+    v4.pop_back();
+    v4.erase(v4.begin());
+    // v4.clear(); gros kill du tableau à la bien
+
+    for (int const &value : v4) {
+        cout << "Element : " << value << endl;
+    }
+     */
+
+    cout << "--- EXERCICE 3.4 ---" << endl;
+    // Mais avec des vectors au lieu des tableaux
+
+    /*
+    int condition = false;
+
+    vector<int> v1(10, rand());
+
+    while ( condition != true) {
+        for (int i = 0; i < v1.size(); i++) {
+            if (i < i++;) {
+                cout << v1(i) << endl()
+            }
+        }
+    }
+     */
+
+    // Correction
+
+    // Freestyle, si tu comprends pas c'est pas trop grave
+
+    vector<vector<int>> v = {
+            {0, 1, 2, 3, 4, 5, 6, 7, 8, 9},
+            {9, 8, 7, 4, 6, 5, 4, 3, 2, 1},
+            {6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
+            {0, 1, 2, 3, 4, 5, 1, 7, 8, 9}
+    };
+/*
+    for (int i = 0; i < v.size(); i++) {
+        cout << "tableau " << i << " : ";
+        for (int j = 0; j < v[i].size(); j++) {
+            cout << v[i][j] << " ";
+        }
+        cout << endl;
+    }
+*/
+
+
+/*
+    for (int i = 0; i < v.size(); i++) {
+        vector<int> mon_vector(v[i]);
+
+        // Initialisation de la variable "croissant"
+        bool croissant = true;
+        bool decroissant = true;
+        bool constant = true;
+
+
+        for (int j = 1; j < mon_vector.size(); j++) {
+
+            // Solution pas très belle
+            // Tester si c'est croissant
+            if (croissant && mon_vector[j-1] < mon_vector[j]) {
+                croissant = true;
+            } else {
+                croissant = false;
+            }
+        // Solution plus simple à lire
+        // Tester si c'est décroissant
+        decroissant = (decroissant && mon_vector[j-1] > mon_vector[j]);
+        // Tester si c'est égal
+        constant = (constant && mon_vector[j-1] == mon_vector[j]);
+        }
+        if (croissant) {
+            cout << "Croissant !";
+        } else if (decroissant) {
+            cout << "Decroissant !";
+        } else if (constant) {
+            cout << "Constant !";
+        } else {
+            cout << "Freestyle !";
+        }
+    }
+
+    vector<int> v1 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    vector<int> v2 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    vector<int> v3 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+*/
+
+    cout << "--- EXERCICE 5.0 ---" << endl;
+
+    // Exemple de fonction :
+
+/*
+    int uneFonctionExemple (int unParametre, string unAutreParametre) {
+        cout << unParametre * 10 << : << unAutreParametre << endl;
+        return 0 / resultat;
+    }
+*/
+
+
+
 
     return 0;
-
-
-
-
 
 
 }
