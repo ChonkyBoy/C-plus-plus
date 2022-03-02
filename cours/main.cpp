@@ -1,7 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <list>
-
+#include <vector>
 
 using namespace std;
 
@@ -158,7 +158,18 @@ int main(int argc, char **argv) {
                 cout << "oops, failed ):" << endl;
             }
         } */
-    cout << "--- EXERCICE 3.3 ---" << endl;
+
+    /* --- VECTORS --- */
+    cout << "--- EXERCICE 4.1 ---" << endl;
+
+    vector<int> v1;
+
+    return 0;
+
+
+
+
+
 
 }
 
