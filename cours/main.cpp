@@ -2,7 +2,6 @@
 #include <algorithm>
 #include <list>
 
-test test
 
 using namespace std;
 
