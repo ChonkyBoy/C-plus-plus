@@ -5,13 +5,20 @@
 
 using namespace std;
 
+void Function (int& a, int& b) {
+    int c = a;
+    a = b;
+    b = c;
+
+}
+
 int main(int argc, char **argv) {
     /* cout << "--- EXERCICE 2.2 ---" << endl;
     for (int i = 0; i<100; i++)
-        cout << i << " ";     */
+        cout << i << " ";
 
 
-    /* cout << "--- EXERCICE 2.3 ---" << endl;
+    cout << "--- EXERCICE 2.3 ---" << endl;
     int v1;
     int v2;
     int v3;
@@ -22,10 +29,10 @@ int main(int argc, char **argv) {
     cout << "à nouveau" << endl; cin >> v3;
     cout << "ça fait beaucoup là non ?" << endl; cin >> v4;
     cout << "la dernière" << endl; cin >> v5;
-    cout <<  "le nombre le plus petit que tu as entré est " << min({v1, v2, v3, v4, v5}) << "." << endl; */
+    cout <<  "le nombre le plus petit que tu as entré est " << min({v1, v2, v3, v4, v5}) << "." << endl;
 
 
-    /* cout << "--- EXERCICE 2.4 ---" << endl;
+    cout << "--- EXERCICE 2.4 ---" << endl;
     int number;
     int valeur;
     int chances = 10;
@@ -43,10 +50,10 @@ int main(int argc, char **argv) {
             chances--;
             cout << "oopsy doopsy, you made a misty.. try again! Careful, still " << chances << "chance(s) left!" << endl;
         }
-    } */
+    }
 
 
-    /* cout << "--- EXERCICE 2.5 ---" << endl;
+    cout << "--- EXERCICE 2.5 ---" << endl;
 
     int var = 1;
     int sum = 0;
@@ -59,8 +66,8 @@ int main(int argc, char **argv) {
         cout << "You are now out, the average is" << endl;
         }
     cout << "error. grade must be above 0!" << endl;
-    }*/
-/*
+    }
+
     cout << "--- EXERCICE 2.6 ---" << endl;
 
     int userOP;
@@ -96,8 +103,8 @@ int main(int argc, char **argv) {
         }
 
     }
-    */
-    /*cout << "--- EXERCICE 3.1 --- TABLEAUX" << endl;
+
+    cout << "--- EXERCICE 3.1 --- TABLEAUX" << endl;
 
      int tab[10];
      int i;
@@ -115,9 +122,9 @@ int main(int argc, char **argv) {
             cout << tab[i] << endl;
             i++;
         }
-     } */
+     }
 
-    /*int tableau[10];
+    int tableau[10];
 
     for (int i = 0; i < 10; i++) {
         cout << "saisissez un nombre: ";
@@ -129,8 +136,8 @@ int main(int argc, char **argv) {
         } else {
             cout << "La valeur dans la case " << i << " est inferieur à 10" << endl;
         }
-    } */
-    /*
+    }
+
     cout << "--- EXERCICE 3.2 ---" << endl;
 
     int tab[10] = {4, 85, 95, 4, 65, 25, 36, 7, 10, 81};
@@ -157,11 +164,10 @@ int main(int argc, char **argv) {
                 chances --;
                 cout << "oops, failed ):" << endl;
             }
-        } */
+        }
 
-    /* --- VECTORS --- */
+    // --- VECTORS ---
 
-    /*
 
     cout << "--- EXERCICE 4.* ---" << endl;
 
@@ -170,7 +176,7 @@ int main(int argc, char **argv) {
     vector<int> v1;
     vector<int> v2(10, 0);
     vector<int> v3(v2);
-    vector<int> v4(v3.begin(), v3.begin()+5 /* ou v2.end()-5 *//*);
+    vector<int> v4(v3.begin(), v3.begin()+5);
 
 
     // Exo 4.2
@@ -203,12 +209,10 @@ int main(int argc, char **argv) {
     for (int const &value : v4) {
         cout << "Element : " << value << endl;
     }
-     */
 
-    cout << "--- EXERCICE 3.4 ---" << endl;
+    // cout << "--- EXERCICE 3.4 ---" << endl;
     // Mais avec des vectors au lieu des tableaux
 
-    /*
     int condition = false;
 
     vector<int> v1(10, rand());
@@ -220,19 +224,16 @@ int main(int argc, char **argv) {
             }
         }
     }
-     */
 
     // Correction
 
     // Freestyle, si tu comprends pas c'est pas trop grave
-
     vector<vector<int>> v = {
             {0, 1, 2, 3, 4, 5, 6, 7, 8, 9},
             {9, 8, 7, 4, 6, 5, 4, 3, 2, 1},
             {6, 6, 6, 6, 6, 6, 6, 6, 6, 6},
             {0, 1, 2, 3, 4, 5, 1, 7, 8, 9}
     };
-/*
     for (int i = 0; i < v.size(); i++) {
         cout << "tableau " << i << " : ";
         for (int j = 0; j < v[i].size(); j++) {
@@ -240,10 +241,7 @@ int main(int argc, char **argv) {
         }
         cout << endl;
     }
-*/
 
-
-/*
     for (int i = 0; i < v.size(); i++) {
         vector<int> mon_vector(v[i]);
 
@@ -283,20 +281,17 @@ int main(int argc, char **argv) {
     vector<int> v2 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     vector<int> v3 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-*/
 
     cout << "--- EXERCICE 5.0 ---" << endl;
 
     // Exemple de fonction :
 
-/*
     int uneFonctionExemple (int unParametre, string unAutreParametre) {
         cout << unParametre * 10 << : << unAutreParametre << endl;
         return 0 / resultat;
     }
 */
-
-
+    cout << "--- EXERCICE 5.4 ---" << endl;
 
 
     return 0;
