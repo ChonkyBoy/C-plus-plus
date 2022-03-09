@@ -4,15 +4,33 @@
 #include <vector>
 
 using namespace std;
-
+// Toutes les fonctions :
+/*
+ * Fonction exo 5.4 (+ exemple qu'autre chose)
 void Function (int& a, int& b) {
     int c = a;
     a = b;
     b = c;
-
 }
 
+
+// Fonction exo 6.3:
+
+    void reference (int& a, int& b) {
+        int c = a;
+        a = b;
+        b = c;
+    }
+
+    void pointeurs (int* a, int* b) {
+        int c = *a;
+        *a = *b;
+        *b = c;
+    }
+*/
+
 int main(int argc, char **argv) {
+    //Les exos
     /* cout << "--- EXERCICE 2.2 ---" << endl;
     for (int i = 0; i<100; i++)
         cout << i << " ";
@@ -290,8 +308,49 @@ int main(int argc, char **argv) {
         cout << unParametre * 10 << : << unAutreParametre << endl;
         return 0 / resultat;
     }
+    cout << "--- EXERCICE 6.1 ---" << endl;
+
+    int variable; // je d"clare un entier
+    string chaine;
+    string* pointeur_vers_une_chaine;
+
+    int* pointeur; // je déclare un pointeur
+    pointeur = new int;
+
+    *pointeur = 12;
+
+    int** pointeru_vers_un_pointeur;
+
+    delete pointeur;
+
+    int* p1;
+    p1 = new int;
+
+    int** p2;
+    p2 = new int*;
+
+    *p1 = 12;
+    *p2 = p1;
+
+    delete p1;
+
+    cout << "--- EXERCICE 6.3 ---" << endl;
+
+    int var1;
+    int var2;
+    var1 = 9;
+    var2 = 8;
+
+    int* p1 = new int;
+    int* p2 = new int;
+    *p1 = var1;
+    *p2 = var2;
+
+    cout << *p1 << p1 << *p2 << p2 << endl;
+    reference(var1, var2);
+    pointeurs(p1, p2);
+    cout << *p1 << p1 << *p2 << p2;
 */
-    cout << "--- EXERCICE 5.4 ---" << endl;
 
 
     return 0;
