@@ -29,9 +29,121 @@ void Function (int& a, int& b) {
     }
 */
 
+//Class exo 7.1:
+/*
+class Rectangle {
+private:
+    int largeur;
+    int hauteur;
+public:
+
+    int get_largeur() { return this -> largeur; };
+    void set_largeur(int largeur) {this -> largeur = largeur; };
+
+    int get_hauteur() { return this -> hauteur; };
+    void set_hauteur(int hauteur) { this -> hauteur = hauteur; };
+
+    void afficher() {
+        cout << "Le rectangle à pour largeur " << this->largeur << " cm, et a pour hauteur " << this->hauteur << " cm."
+             << endl;
+    }
+
+
+
+    //Rectangle(int largeur; int hauteur) {
+//   int aire() {
+//        int surface = hauteur*largeur;
+//        cout << "Le rectangle à pour aire " << surface << " cm²" << endl    ;
+//    }
+//    int perimetre() {
+//        int peri = this->hauteur*2 + this->largeur*2;
+//    }
+    };
+*/
+/*
+//Class exo 7.5
+class Piece {
+
+protected:
+    int x;
+    int y;
+    string nom;
+
+public:
+    Piece(string nom, int x, int y) {
+        this->nom = nom;
+        this->x = x;
+        this->y = y;
+    }
+
+    void afficher() {
+        cout << "Pièce(" << this->nom << ") en position x = " << this->x << "et y = " << this->y << endl;
+    }
+
+    virtual bool valide(int x, int y) {
+
+
+        return true;
+    }
+
+    virtual void deplacer(int x, int y) {
+        if (this->valide(x, y)) {
+            this->y = y;
+            this->x = x;
+        }
+    }
+
+};
+
+class Pion : public Piece {
+public:
+    Pion(int x, int y) : Piece("Pion", x, y) { } //Acolades pas inutiles !! juste vides
+
+    virtual bool valide(int x, int y) {
+        return ((this->x == x) && (this->y + 1 == y));
+    }
+};
+class Fou : public Piece {
+public:
+    Fou(int x, int y): Piece("Fou", x, y) { } //Acolades pas inutiles !! juste vides
+    virtual bool valide(int x, int y) {
+        return this() &&( abs(this->y - y) == abs(this->y - y));
+    }
+};
+*/
+
+//Class exo 7.4:
+class Noeud {
+private:
+    int donnee;
+    Noeud* next;
+
+public:
+    Noeud(int donnee) {
+        this->donnee = donnee;
+        this->next = nullptr;
+    }
+
+    virtual void afficher() {
+        cout << "Maillon: " << this->donnee << endl;
+        if (this->next != nullptr) {
+            this->next->afficher();
+        }
+    }
+
+    virtual void add(int value) {
+       if (this->next == nullptr) {
+           this->next = new Noeud(value);
+       } else {
+           this->add(value);
+       }
+    }
+
+};
+
 int main(int argc, char **argv) {
     //Les exos
-    /* cout << "--- EXERCICE 2.2 ---" << endl;
+    /*cout << "--- EXERCICE 2.2 ---" << endl;
     for (int i = 0; i<100; i++)
         cout << i << " ";
 
@@ -351,7 +463,98 @@ int main(int argc, char **argv) {
     pointeurs(p1, p2);
     cout << *p1 << p1 << *p2 << p2;
 */
+    /*
+    cout << "Exercice 7.1" << endl;
 
+    Rectangle r1;
+    r1.set_largeur(12);
+    r1.set_hauteur(6);
+    r1.afficher();
+
+    Rectangle r2;
+    r2.set_largeur(56);
+    r2.set_hauteur(42);
+    r2.afficher();
+
+    //On crée un truc comme une variable
+    Rectangle* p1;
+    //J'instencie un nouveau rectangle, que j'appelle p1
+    p1 = new Rectangle;
+
+    //p1 = la valeur du pointeur
+    // *p1 = la valeur qui est pointé par le pointeur | le rectangle est accessible avec le pointeur ici
+
+    //On manipule differents types
+
+    //On affiche le rectangle, mais on doit mettre les paenthèses sinon ça casse
+    (*p1).afficher();
+
+    //Là on a pas besoin des parenthèses
+    p1->afficher();
+
+    //Pour le reste de l'exo tu iras voir sur le github car tu dois écouter
+
+
+
+    delete p1;
+
+
+
+    cout << "Exercice 7.5" << endl;
+
+    Piece *roi = new Piece("roi", 0, 0);
+    Piece *dame = new Piece("dame", 12, 5);
+
+    roi->afficher();
+    dame->afficher();
+
+    cout << "Deplacement.." << endl;
+
+    roi->deplacer(4, 5);
+    dame->deplacer(45, 8465);
+
+    roi->afficher();
+    dame->afficher();
+
+    //On crée des pions avec notre nouvelle classe
+
+    Pion *pion1 = new Pion(0, 0);
+    Pion *pion2 = new Pion(1, 1);
+
+    //On les fait se déplacer grace à la nv fonction
+    //On affiche les nv résultats de co et on croise les doigts
+
+    if (pion1->valide(0, 1)) { cout << "Pion1 : Déplacement 0x1 autorisé !" << endl; }
+    if (pion1->valide(1, 1)) { cout << "Pion1 : Déplacement 1x1 pas autorisé !" << endl; }
+
+    if (pion1->valide(0, 1)) { cout << "Pion2 : Déplacement 0x1  autorisé !" << endl; }
+    if (pion1->valide(1, 1)) { cout << "Pion2 : Déplacement 1x1 pas autorisé !" << endl; }
+
+    Fou* fou = new Fou(0,0);
+
+
+    vector<Piece*> pieces;
+    pieces.push_back(roi);
+    pieces.push_back(dame);
+    pieces.push_back(pion1);
+    pieces.push_back(pion2);
+
+    for (int i = 0; i < pieces.size(); i++ ) {
+        pieces[i]->afficher();
+    }
+
+
+    delete pion1, pion2;
+*/
+
+    cout << "Exercice 7.4, on fait rien dans le bon ordre je trouve ça un peu marrant" << endl;
+
+    Noeud* noeud = new Noeud(666);
+
+
+    noeud->afficher();
+
+    delete noeud;
 
     return 0;
 

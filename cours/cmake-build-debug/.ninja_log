@@ -1,19 +1,9 @@
 # ninja log v5
 5	492	6648907285327753	CMakeFiles/untitled.dir/Exo_1.1.cpp.obj	5abb3164d6e9f76c
-1	313	6654966984434072	build.ninja	84c69750e2d2572b
-6	615	6673075805854023	CMakeFiles/untitled.dir/main.cpp.obj	719c42fca115d9c
+1	313	6703417627963652	build.ninja	84c69750e2d2572b
+4	580	6673082704453117	CMakeFiles/untitled.dir/main.cpp.obj	719c42fca115d9c
 17	327	6654971142016075	CMakeFiles/untitled.dir/Exo_2.1.cpp.obj	d18e8aae7d9007d8
-615	786	6673075807573168	untitled.exe	bda954e8f93560d9
+581	753	6673082706171874	untitled.exe	bda954e8f93560d9
 27	511	6648907285522941	CMakeFiles/untitled.dir/Exo_1.2.cpp.obj	2a2f546fe51caffd
 16	377	6654966606794090	CMakeFiles/untitled.dir/Exo_1.4.cpp.obj	3e67ea231af52593
 22	502	6648907285423024	CMakeFiles/untitled.dir/Exo_1.3.cpp.obj	eab20b667444a9c9
-8	657	6673076039098218	CMakeFiles/untitled.dir/main.cpp.obj	719c42fca115d9c
-658	832	6673076040728834	untitled.exe	bda954e8f93560d9
-5	628	6673076775748000	CMakeFiles/untitled.dir/main.cpp.obj	719c42fca115d9c
-629	800	6673076777320711	untitled.exe	bda954e8f93560d9
-5	612	6673079526689596	CMakeFiles/untitled.dir/main.cpp.obj	719c42fca115d9c
-613	786	6673079528408450	untitled.exe	bda954e8f93560d9
-5	595	6673081321382198	CMakeFiles/untitled.dir/main.cpp.obj	719c42fca115d9c
-595	764	6673081322999224	untitled.exe	bda954e8f93560d9
-4	580	6673082704453117	CMakeFiles/untitled.dir/main.cpp.obj	719c42fca115d9c
-581	753	6673082706171874	untitled.exe	bda954e8f93560d9
